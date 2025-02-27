@@ -1,0 +1,36 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "build/server.js",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env --clear-screen=false server.ts",
+    "build": "tsup",
+    "start": "node --env-file=.env build/server.js",
+    "lint": "next lint --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm *.tsbuildinfo",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "auto-bind": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "ts-pattern": "^5.6.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
