@@ -2,7 +2,7 @@ import statusData from "@/src/infrastructure/data/status.json" assert { type: "j
 import manualStatusData from "@/src/infrastructure/data/manual_status.json" assert { type: "json" };
 import { parseDate } from "@/src/commons/utils/general";
 
-type DataType = {
+type StatusData = {
   equipment_id: number;
   start_time: string;
   end_time: string;
@@ -20,6 +20,19 @@ type OccurancesData = {
   end_time?: string;
 };
 
+type MergedStatusDataProps = {
+  statusData: StatusData[];
+  manualStatusData: StatusData[];
+};
+
+type GetDowntimeDataProps = {
+  data: StatusData[];
+};
+
+type GetStatusAggregateDataProps = {
+  data: StatusData[];
+};
+
 export default class DevicesRepository {
   public name: string;
 
@@ -27,14 +40,15 @@ export default class DevicesRepository {
     this.name = "Devices Repository";
   }
 
-  getStatusAggregateData() {
-    const mergedData = this._mergeStatusData(
-      statusData as DataType[],
-      manualStatusData as DataType[]
-    );
-    const filteredData = this._getDowntimeData(mergedData);
+  getStatusData() {
+    return {
+      statusData: statusData as StatusData[],
+      manualStatusData: manualStatusData as StatusData[],
+    };
+  }
 
-    const occurances: OccurancesData[] = filteredData.reduce(
+  getStatusAggregateData({ data }: GetStatusAggregateDataProps) {
+    const occurances: OccurancesData[] = data.reduce(
       (result: OccurancesData[], current) => {
         const [startDate] = current.start_time.split(" ");
         const dIndex = result.findIndex(
@@ -78,44 +92,18 @@ export default class DevicesRepository {
     });
   }
 
-  _splitMidnightPeriods(entry: DataType): DataType[] {
-    const [startDate] = entry.start_time.split(" ");
-    const [endDate] = entry.end_time.split(" ");
-
-    if (startDate !== endDate) {
-      return [
-        {
-          equipment_id: entry.equipment_id,
-          start_time: entry.start_time,
-          end_time: `${startDate} 23:59:59`,
-          status: entry.status,
-          reason: entry.reason ?? "",
-        },
-        {
-          equipment_id: entry.equipment_id,
-          start_time: `${endDate} 00:00:00`,
-          end_time: entry.end_time,
-          status: entry.status,
-          reason: entry.reason ?? "",
-        },
-      ];
-    }
-
-    return [entry];
-  }
-
-  _mergeStatusData = (statusData: DataType[], manualStatusData: DataType[]) => {
-    let merged: DataType[] = [];
+  mergedStatusData({ statusData, manualStatusData }: MergedStatusDataProps) {
+    let merged: StatusData[] = [];
     // Step 1: Split status data into periods cross midnight
     const splitStatus = statusData
-      .flatMap(this._splitMidnightPeriods)
+      .flatMap(this.splitMidnightPeriods)
       .sort(
         (a, b) =>
           (parseDate(a.start_time) as unknown as number) -
           (parseDate(b.start_time) as unknown as number)
       );
     const splitManualStatus = manualStatusData
-      .flatMap(this._splitMidnightPeriods)
+      .flatMap(this.splitMidnightPeriods)
       .sort(
         (a, b) =>
           (parseDate(a.start_time) as unknown as number) -
@@ -163,9 +151,35 @@ export default class DevicesRepository {
         (parseDate(a.start_time) as unknown as number) -
         (parseDate(b.start_time) as unknown as number)
     );
-  };
+  }
 
-  _getDowntimeData(data: DataType[]): DataType[] {
+  splitMidnightPeriods(entry: StatusData): StatusData[] {
+    const [startDate] = entry.start_time.split(" ");
+    const [endDate] = entry.end_time.split(" ");
+
+    if (startDate !== endDate) {
+      return [
+        {
+          equipment_id: entry.equipment_id,
+          start_time: entry.start_time,
+          end_time: `${startDate} 23:59:59`,
+          status: entry.status,
+          reason: entry.reason ?? "",
+        },
+        {
+          equipment_id: entry.equipment_id,
+          start_time: `${endDate} 00:00:00`,
+          end_time: entry.end_time,
+          status: entry.status,
+          reason: entry.reason ?? "",
+        },
+      ];
+    }
+
+    return [entry];
+  }
+
+  getDowntimeData({ data }: GetDowntimeDataProps): StatusData[] {
     const downtimeData = data
       .filter((d) => d.status === "DOWN")
       .map((d) => ({

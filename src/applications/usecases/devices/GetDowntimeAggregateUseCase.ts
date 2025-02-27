@@ -17,7 +17,17 @@ export default class GetDowntimeAggregateUseCase {
   }
 
   async execute(_props: GetDowntimeAggregateUseCasePayload) {
-    const mergedData = this._devicesRepository.getStatusAggregateData();
-    return mergedData;
+    const { statusData, manualStatusData } =
+      this._devicesRepository.getStatusData();
+    const mergedData = this._devicesRepository.mergedStatusData({
+      statusData,
+      manualStatusData,
+    });
+    const downtimeData = this._devicesRepository.getDowntimeData({
+      data: mergedData,
+    });
+    const aggregateDowntimeData =
+      this._devicesRepository.getStatusAggregateData({ data: downtimeData });
+    return aggregateDowntimeData;
   }
 }
