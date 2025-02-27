@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Accountant",
+        "total_member": 1
+    },
+    {
+        "name": "PM 1",
+        "total_member": 1
+    },
+    {
+        "name": "Lead Mining 1",
+        "total_member": 1
+    },
+    {
+        "name": "Lead Mining 2",
+        "total_member": 1
+    },
+    {
+        "name": "Electrical Team",
+        "total_member": 1
+    },
+    {
+        "name": "Mining 2",
+        "total_member": 5
+    },
+    {
+        "name": "IT",
+        "total_member": 4
+    },
+    {
+        "name": "Mechanical",
+        "total_member": 2
+    },
+    {
+        "name": "Data Engineer",
+        "total_member": 7
+    },
+    {
+        "name": "QA",
+        "total_member": 1
+    },
+    {
+        "name": "PM 2",
+        "total_member": 1
+    },
+    {
+        "name": "Operational",
+        "total_member": 2
+    },
+    {
+        "name": "Country Manager",
+        "total_member": 1
+    },
+    {
+        "name": "HRD",
+        "total_member": 1
+    },
+    {
+        "name": "Ansys",
+        "total_member": 3
+    },
+    {
+        "name": "RnD",
+        "total_member": 10
+    },
+    {
+        "name": "Mining 5",
+        "total_member": 5
+    },
+    {
+        "name": "Lead Mining 5",
+        "total_member": 1
+    },
+    {
+        "name": "Sales",
+        "total_member": 1
+    },
+    {
+        "name": "Embedded",
+        "total_member": 5
+    },
+    {
+        "name": "Control",
+        "total_member": 7
+    },
+    {
+        "name": "Planning",
+        "total_member": 4
+    },
+    {
+        "name": "Presales",
+        "total_member": 4
+    },
+    {
+        "name": "Mining 3",
+        "total_member": 5
+    },
+    {
+        "name": "Mining 4",
+        "total_member": 4
+    },
+    {
+        "name": "Mining 6",
+        "total_member": 5
+    },
+    {
+        "name": "Mining 7",
+        "total_member": 2
+    },
+    {
+        "name": "External 1",
+        "total_member": 1
+    },
+    {
+        "name": "External 2",
+        "total_member": 1
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Central Papua",
+        "quota": 14
+    },
+    {
+        "name": "Bogor",
+        "quota": 15
+    },
+    {
+        "name": "East Java",
+        "quota": 18
+    },
+    {
+        "name": "Jakarta",
+        "quota": 2
+    },
+    {
+        "name": "West Nusa Tenggara",
+        "quota": 20
+    },
+    {
+        "name": "North Maluku",
+        "quota": 20
+    }
+]

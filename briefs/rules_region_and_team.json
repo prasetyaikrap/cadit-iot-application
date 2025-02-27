@@ -1,0 +1,47 @@
+{
+    "fixed_team_in_region": [
+        {
+            "region": "Central Papua",
+            "teams": ["Accountant"]
+        },
+        {
+            "region": "Bogor",
+            "teams": ["Mechanical"]
+        },
+        {
+            "region": "Jakarta",
+            "teams": ["Country Manager", "HRD"]
+        },
+        {
+            "region": "West Nusa Tenggara",
+            "teams": ["Ansys"]
+        },
+        {
+            "region": "North Maluku",
+            "teams": ["Embedded"]
+        }
+    ],
+    "team_need_work_together": [
+        {
+            "teams": ["PM 1", "Lead Mining 1", "Lead Mining 2"]
+        },
+        {
+            "teams": ["Data Engineer", "QA"]
+        },
+        {
+            "teams": ["Mining 5", "Lead Mining 5"]
+        },
+        {
+            "teams": ["Mining 6", "External 1"]
+        },
+        {
+            "teams": ["Mining 3", "External 2"]
+        },
+        {
+            "teams": ["Country Manager", "HRD"]
+        },
+        {
+            "teams": ["Ansys", "Sales"]
+        }
+    ]
+}
