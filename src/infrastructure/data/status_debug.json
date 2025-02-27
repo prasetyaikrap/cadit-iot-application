@@ -1,0 +1,23 @@
+[
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 22:30:00",
+    "end_time": "2024/12/2 01:00:00",
+    "status": "DOWN",
+    "reason": "Status Down"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/2 01:00:00",
+    "end_time": "2024/12/2 03:00:00",
+    "status": "RUNNING",
+    "reason": "Status Running"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/2 03:45:00",
+    "end_time": "2024/12/2 04:00:00",
+    "status": "IDLE",
+    "reason": "Status Idle"
+  }
+]

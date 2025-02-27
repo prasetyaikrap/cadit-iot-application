@@ -2,7 +2,6 @@ import { NextFunction, Request, Response } from "express";
 
 export type BaseUseCasePayload = {
   credentials: {
-    userId: string;
     clientId: string;
   };
 };
