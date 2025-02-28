@@ -6,7 +6,7 @@ export default defineConfig({
   bundle: true,
   outDir: "./build",
   clean: true,
-  loader: { ".json": "copy" },
+  loader: { ".json": "json" },
   minify: true,
   format: ["esm"],
 });
