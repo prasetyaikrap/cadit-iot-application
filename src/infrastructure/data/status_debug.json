@@ -1,23 +1,80 @@
 [
   {
     "equipment_id": 1,
-    "start_time": "2024/12/1 22:30:00",
-    "end_time": "2024/12/2 01:00:00",
-    "status": "DOWN",
-    "reason": "Status Down"
+    "start_time": "2024/12/1 00:00:01",
+    "end_time": "2024/12/1 03:45:30",
+    "status": "RUNNING"
   },
   {
     "equipment_id": 1,
-    "start_time": "2024/12/2 01:00:00",
-    "end_time": "2024/12/2 03:00:00",
-    "status": "RUNNING",
-    "reason": "Status Running"
+    "start_time": "2024/12/1 03:45:30",
+    "end_time": "2024/12/1 07:27:55",
+    "status": "IDLE"
   },
   {
     "equipment_id": 1,
-    "start_time": "2024/12/2 03:45:00",
-    "end_time": "2024/12/2 04:00:00",
-    "status": "IDLE",
-    "reason": "Status Idle"
+    "start_time": "2024/12/1 07:27:55",
+    "end_time": "2024/12/1 08:08:50",
+    "status": "RUNNING"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 08:08:50",
+    "end_time": "2024/12/1 08:49:33",
+    "status": "IDLE"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 08:49:33",
+    "end_time": "2024/12/1 10:37:36",
+    "status": "RUNNING"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 10:37:36",
+    "end_time": "2024/12/1 13:02:14",
+    "status": "DOWN"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 13:02:14",
+    "end_time": "2024/12/1 13:49:57",
+    "status": "OFFLINE"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 13:49:57",
+    "end_time": "2024/12/1 17:16:31",
+    "status": "IDLE"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 17:16:31",
+    "end_time": "2024/12/1 17:48:54",
+    "status": "DOWN"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 17:48:54",
+    "end_time": "2024/12/1 18:52:38",
+    "status": "IDLE"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 18:52:38",
+    "end_time": "2024/12/1 20:02:57",
+    "status": "RUNNING"
+  },
+  {
+    "equipment_id": 1,
+    "start_time": "2024/12/1 20:02:57",
+    "end_time": "2024/12/1 22:05:21",
+    "status": "IDLE"
+  },
+  {
+    "equipment_id": 2,
+    "start_time": "2024/12/1 00:02:57",
+    "end_time": "2024/12/1 01:05:21",
+    "status": "IDLE"
   }
 ]

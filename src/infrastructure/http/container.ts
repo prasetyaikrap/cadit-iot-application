@@ -7,6 +7,7 @@ import DevicesRepository from "../repository/devices/DevicesRepository";
 import GetDowntimeAggregateUseCase from "@/src/applications/usecases/devices/GetDowntimeAggregateUseCase";
 import devicesRoutes from "@/src/interfaces/http/api/devices/routes";
 import DevicesHandler from "@/src/interfaces/http/api/devices/handler";
+import GetOEECalculationUseCase from "@/src/applications/usecases/devices/GetOEECalulationUseCase";
 
 export default function createApp() {
   // Repositories
@@ -15,6 +16,9 @@ export default function createApp() {
   // Usecases
   const devicesUseCases = {
     getDowntimeAggregateUseCase: new GetDowntimeAggregateUseCase({
+      devicesRepository,
+    }),
+    getOEECalculationUseCase: new GetOEECalculationUseCase({
       devicesRepository,
     }),
   };

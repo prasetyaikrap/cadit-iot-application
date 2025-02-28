@@ -9,6 +9,7 @@ export default function devicesRoutes({
   const routes = express.Router();
 
   routes.get("/downtime", controller.getDowntimeAggregate);
+  routes.get("/oee", controller.getOEECalculation);
 
   return routes;
 }

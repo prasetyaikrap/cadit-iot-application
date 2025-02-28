@@ -1,0 +1,83 @@
+[
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 14400,
+    "planned_quantity": 20,
+    "start_production": "2024/12/1 00:00:01",
+    "finish_production": "2024/12/1 04:02:25",
+    "actual_quantity": 18,
+    "defect_quantity": 2
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 7200,
+    "planned_quantity": 40,
+    "start_production": "2024/12/1 04:15:07",
+    "finish_production": "2024/12/1 06:12:43",
+    "actual_quantity": 38,
+    "defect_quantity": 2
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 14400,
+    "planned_quantity": 30,
+    "start_production": "2024/12/1 06:25:49",
+    "finish_production": "2024/12/1 10:09:01",
+    "actual_quantity": 27,
+    "defect_quantity": 3
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 7200,
+    "planned_quantity": 30,
+    "start_production": "2024/12/1 10:33:52",
+    "finish_production": "2024/12/1 12:49:28",
+    "actual_quantity": 29,
+    "defect_quantity": 1
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 3600,
+    "planned_quantity": 40,
+    "start_production": "2024/12/1 13:13:32",
+    "finish_production": "2024/12/1 14:22:32",
+    "actual_quantity": 36,
+    "defect_quantity": 4
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 10800,
+    "planned_quantity": 30,
+    "start_production": "2024/12/1 14:32:44",
+    "finish_production": "2024/12/1 17:18:20",
+    "actual_quantity": 29,
+    "defect_quantity": 1
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 14400,
+    "planned_quantity": 50,
+    "start_production": "2024/12/1 17:45:08",
+    "finish_production": "2024/12/1 22:06:44",
+    "actual_quantity": 46,
+    "defect_quantity": 4
+  },
+  {
+    "equipment_id": 1,
+    "planned_duration_in_second": 3600,
+    "planned_quantity": 40,
+    "start_production": "2024/12/1 22:23:32",
+    "finish_production": "2024/12/1 23:34:20",
+    "actual_quantity": 38,
+    "defect_quantity": 2
+  },
+  {
+    "equipment_id": 2,
+    "planned_duration_in_second": 3600,
+    "planned_quantity": 40,
+    "start_production": "2024/12/1 00:23:32",
+    "finish_production": "2024/12/1 01:34:20",
+    "actual_quantity": 38,
+    "defect_quantity": 2
+  }
+]
